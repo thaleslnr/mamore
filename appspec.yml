@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html/mamore
+    #source: codedeploy/zz_mamore.conf
+    #destination: /etc/httpd/conf.d/
+hooks:
+  ApplicationStart:
+    - location: codedeploy/install.sh
